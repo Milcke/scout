@@ -1,0 +1,11 @@
+{
+    "name": "My Items",
+    "version": "1.0.0",
+    "description": "The Juice Item List",
+    "manifest_version": 3,
+    "author": "Torin Falcongreen",
+    "action":{
+        "default_popup": "index.html",
+        "default_title": "Your Items"
+    }
+}
