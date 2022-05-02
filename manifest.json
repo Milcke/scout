@@ -4,8 +4,16 @@
     "description": "The Juice Item List",
     "manifest_version": 3,
     "author": "Torin Falcongreen",
+    "permissions": ["tabs"],
     "action":{
         "default_popup": "index.html",
         "default_title": "Your Items"
-    }
+    },
+    "content_scripts": [
+        {
+          "matches": ["https://*.theiconic.com.au/*"],
+          "css": ["styles.css"],
+          "js": ["script.js"]
+        }
+      ]
 }
