@@ -1,7 +1,7 @@
 //async 
 function fetchData() {
 
-    fetch('https://www.theiconic.com.au/drover-1-1-4-belt-1101894.html')
+    fetch('https://www.theiconic.com.au/57-40-standard-women-s-1570362.html')
     .then(function(response) {
         // When the page is loaded convert it to text
         return response.text()
@@ -25,7 +25,7 @@ function fetchData() {
 fetchData();
 
 function pollSite() {
-    fetch('https://www.theiconic.com.au/the-logo-strap-snapshot-628923.html')
+    fetch('https://www.theiconic.com.au/57-40-standard-women-s-1570362.html')
     .then(function(response) {
         // When the page is loaded convert it to text
         return response.text()
@@ -36,9 +36,43 @@ function pollSite() {
 
         // Parse the text
         var doc = parser.parseFromString(html, "text/html");
-        var getPrice = doc.getElementsByClassName("price final")[0];
-        var oldPrice = doc.getElementsByClassName("price final")[0].textContent;
-       
+        // var getPrice = doc.getElementsByClassName("price final")[0];
+        // var oldPrice = doc.getElementsByClassName("price final")[0].textContent;
+
+        var selectedSize = doc.getElementsByClassName("small-7 medium-6 columns the-size");
+
+        var sk = doc.querySelector('[data-key="load"]').textContent;
+
+        console.log(sk);
+        fetch('')
+
+        //console.log(selectedSize[0]);
+        //var newS = selectedSize.getElementsByClassName('original-size').textContent;
+        //console.log(newS);
+
+        var choice = " 4 "
+
+        for (var i=0; i < selectedSize.length; i++) {
+            console.log(selectedSize[i].getElementsByClassName('original-size')[i].textContent);
+            console.log(selectedSize.length);
+            console.log("done");
+            // if(selectedSize[i].getElementsByClassName('original-size')[i].textContent == choice){
+            //    var result = selectedSize[i].getElementsByClassName('original-size')[i].textContent;
+            //     // result=selected[i].textContent;
+            //     console.log("thisisthesize "+result);
+            // }else{
+            //     console.log("not found "+result);
+            // }
+                
+            
+        }
+        // console.log("thisisthenewsize "+result);
+        
+
+
+        
+
+
         console.log(oldPrice)
 
         let td = document.createElement('td');
@@ -61,4 +95,4 @@ function pollSite() {
 })
 }   
 
-setInterval(pollSite, 1000);
+setInterval(pollSite, 10000);
