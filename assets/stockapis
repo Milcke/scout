@@ -1,0 +1,26 @@
+Stock APIs
+
+Asos
+GET Id
+https://www.asos.com/au/asos-design/asos-design-oversized-varsity-bomber-jacket-in-bright-pink-with-black-faux-leather-sleeves/prd/201185959?clr=pink&colourWayId=201185970&cid=3606
+
+curl "https://www.asos.com/api/product/catalogue/v3/stockprice?productIds=201185959&store=AU&currency=AUD&keyStoreDataversion=dup0qtf-35"
+
+Iconic
+
+GET Id
+doc.querySelector('[data-key="load"]').textContent
+
+curl https://eve.theiconic.com.au/v2/catalog/products/NE838SF70FPT/
+
+curl https://eve.theiconic.com.au/v2/catalog/products/BE007AA92GBN/look-products?replaceOutOfStock=true&thumbnails=width=352:height=440&page_size=48&show_details=1
+
+ShowPo
+Get ID
+curl 'https://www.showpo.com/on/demandware.store/Sites-ShowpoAU-Site/en_AU/Visenze-Recommendations?pid=taveuni-plunge-cross-back-gown-in-white&type=style-with' 
+
+https://www.showpo.com/on/demandware.store/Sites-ShowpoAU-Site/en_AU/Product-Variation?dwvar_taveuni-plunge-cross-back-gown-in-white_color=WHT1&dwvar_taveuni-plunge-cross-back-gown-in-white_size=10%20(M)&pid=taveuni-plunge-cross-back-gown-in-white&quantity=1
+
+Glue
+GetID
+https://swymstore-v3premium-01.swymrelay.com/api/v2/provider/collect?pid=hpGFNZTkWJthRlZqhU0hwWFSLBAn9lZa0TXDJMsZZrc%3D
